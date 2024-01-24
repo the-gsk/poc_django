@@ -1,0 +1,7 @@
+BEGIN;
+--
+-- Create model UserDetails
+--
+CREATE TABLE "users_userdetails" ("first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "username" varchar(50) NOT NULL UNIQUE, "mobile" varchar(15) NOT NULL UNIQUE, "age" integer NOT NULL, "height" real NOT NULL, "weight" decimal NOT NULL, "birth_date" date NOT NULL, "last_login" datetime NOT NULL, "is_active" bool NOT NULL, "email" varchar(254) NOT NULL UNIQUE, "profile_picture" varchar(100) NOT NULL, "user_id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_slug" varchar(50) NOT NULL, "personal_website" varchar(200) NOT NULL);
+CREATE INDEX "users_userdetails_user_slug_ff01a16d" ON "users_userdetails" ("user_slug");
+COMMIT;
